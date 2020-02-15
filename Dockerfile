@@ -1,11 +1,11 @@
 FROM php:7.4.2-apache-buster AS base
 
 ENV BOOKSTACK=BookStack \
-    BOOKSTACK_VERSION=0.28.0 \
+    BOOKSTACK_VERSION=0.28.2 \
     BOOKSTACK_HOME="/var/www/bookstack"
 
 RUN apt-get -yqq update && \
-    apt-get install -yq --no-install-recommends fonts-freefont-ttf curl wget libtidy5deb1 libpng-tools libmcrypt4 libjpeg62-turbo libfreetype6 && \
+    apt-get install -yq --no-install-recommends fonts-freefont-ttf curl wget libtidy5deb1 libpng-tools libmcrypt4 libjpeg62-turbo libfreetype6 libzip4 && \
     apt-get autoremove -y && \
     apt-get clean -y
 
