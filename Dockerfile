@@ -1,7 +1,7 @@
-FROM php:7.4.2-apache-buster AS base
+FROM php:7.4.3-apache-buster AS base
 
 ENV BOOKSTACK=BookStack \
-    BOOKSTACK_VERSION=0.28.2 \
+    BOOKSTACK_VERSION=0.28.3 \
     BOOKSTACK_HOME="/var/www/bookstack"
 
 RUN apt-get -yqq update && \
