@@ -1,4 +1,4 @@
-FROM php:7.4.7-apache-buster AS base
+FROM php:7.4.9-apache-buster AS base
 
 ENV BOOKSTACK=BookStack \
     BOOKSTACK_VERSION=0.29.3 \
