@@ -1,5 +1,7 @@
 # docker-bookstack
 
+## I'm archiving this repo, since I've switched over to using WikiJS. It's not because of any problems with Bookstack, I just prefer WikiJS at the moment.
+
 This build is _heavily_ influenced by the [solidnerd build](https://github.com/solidnerd/docker-bookstack). Initially I just forked the repo, but I'm starting to divert a lot from `solidnerd's` approach so I've switched to a separate repository that references the original inspiration.
 
 I use [Bookstack](https://github.com/BookStackApp/BookStack) primarily for a [personal wiki](https://skj.wiki), and run it as a [Kubernetes Pod](https://github.com/ttyS0/kubernetes/tree/master/bookstack) in my [Home Lab](https://skj.wiki/books/home-lab).
