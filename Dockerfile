@@ -1,7 +1,7 @@
-FROM php:7.4.9-apache-buster AS base
+FROM php:8.0.1-apache AS base
 
 ENV BOOKSTACK=BookStack \
-    BOOKSTACK_VERSION=0.29.3 \
+    BOOKSTACK_VERSION=0.31.4 \
     BOOKSTACK_HOME="/var/www/bookstack"
 
 RUN apt-get -yqq update \
@@ -53,6 +53,7 @@ COPY --from=build --chown=33:33 /var/www /var/www/
 COPY php.ini /usr/local/etc/php/php.ini
 COPY bookstack.conf /etc/apache2/sites-enabled/bookstack.conf
 COPY docker-entrypoint.sh /bin/docker-entrypoint.sh
+RUN chmod a+x /bin/docker-entrypoint.sh
 
 RUN a2enmod rewrite \
    && rm -rf /var/lib/apt/lists/* /var/tmp/* /etc/apache2/sites-enabled/000-*.conf /usr/src
